@@ -15,7 +15,19 @@ export default function App() {
 
   return (
     <div className="App">
-      <Select options={options} value={value2} onChange={o => setValue2(o)} />
+      {/* Single select uses value2, one instance of the value1 array */}
+      <Select
+        options={options}
+        value={value2}
+        onChange={o => setValue2(o)}
+      />
+      {/* multiple select uses value1, the fulla array */}
+      <Select
+        multiple
+        options={options}
+        value={value1}
+        onChange={o => setValue1(o)}
+      />
     </div>
   );
 }
