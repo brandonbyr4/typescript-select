@@ -1,0 +1,82 @@
+.container {
+    position: relative;
+    width: 20rem;
+    min-height: 1.5rem;
+    border: 0.05rem solid #777;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+.container:focus {
+    border-color: hsl(200, 100%, 50%);
+}
+
+.value {
+    flex-grow: 1;
+}
+
+.clear-btn {
+    background: none;
+    color: #777;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.25rem;
+}
+
+.clear-btn:focus,
+.clear-btn:hover {
+    color: #333;
+}
+
+.divider {
+    background-color: #777;
+    align-self: stretch;
+    width: 0.05rem;
+}
+
+.caret {
+    translate: 0 25%;
+    border: 0.25rem solid transparent;
+    border-top-color: #777;
+}
+
+.options {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    max-height: 15rem;
+    overflow-y: auto;
+    border: 0.05rem solid #777;
+    border-radius: 0.25rem;
+    width: 100%;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    background-color: white;
+    z-index: 100;
+}
+
+.options.show {
+    display: block;
+}
+
+.option {
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.option.highlighted {
+    background-color: hsl(200 100% 50%);
+    color: white;
+}
+
+.option.selected {
+    background-color: hsl(200 100% 70%);
+}
